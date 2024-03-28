@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Форма для входа</h1>
+    <form action="https://jsonplaceholder.typicode.com/posts" method="post">
+        <label for="username">Имя пользователя:</label>
+        <input type="text" id="username" name="username" required>
+        <br>
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <button type="submit">Войти</button>
+    </form>
+
+    <script>
+        function validateForm() {
+            const inputElement = document.getElementById('myInput');
+            const inputValue = inputElement.value.trim(); // Удаляем пробелы с начала и конца строки
+            if (inputValue === '') {
+                alert('Пожалуйста, заполните поле.');
+                return false; // Отменяем отправку формы
+            }
+        }
+    </script>
+
+<form onsubmit="return validateForm()">
+    <input type="text" id="myInput">
+    <button type="submit">Отправить</button>
+
+ 
+    
+
+    <script src="./script.js"></script>
+</body>
+</html>
